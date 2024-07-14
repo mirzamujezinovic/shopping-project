@@ -1,0 +1,33 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 250px;
+    border-radius: 1em;
+    box-shadow: 0 0 20px 5px rgb(205, 200, 200);
+    background-color: #003366;
+}
+
+.img {
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.product-description{
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.product-btn{
+    background-color: orange ;
+    color: white;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.product-price{
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
