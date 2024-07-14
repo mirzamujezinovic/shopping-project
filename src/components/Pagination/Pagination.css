@@ -1,0 +1,47 @@
+.pagination {
+    margin-top: 1em;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: orange;
+  }
+  .pagination-btn-brojevi{
+   width: 20px; 
+   background-color: aqua;
+   border-radius: 30px;
+  }
+
+  .pagination-btn {
+    font-size: 2em;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+  }
+  
+  .pagination-strelica {
+    border-radius: 30px;
+    background-color: #003366;
+    color: white;
+  }
+  
+  .pagination-strelica:hover {
+    color: orange;
+  }
+  
+  .pagination-btn:hover {
+    color: #003366;
+  }
+  
+  .pagination-btn.active {
+    font-size: 2.5em; /* Increase the font size for active page */
+    color: #003366; /* Change the color for active page */
+    font-weight: bold; /* Make the active page bold */
+  }
+  
