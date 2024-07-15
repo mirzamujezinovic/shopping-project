@@ -6,7 +6,14 @@
     border-radius: 1em;
     box-shadow: 0 0 20px 5px rgb(205, 200, 200);
     background-color: #003366;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px 10px rgba(205, 200, 200, 0.9);
+}
+
 
 .img {
     width: 100%;
@@ -20,14 +27,24 @@
     margin-bottom: 10px;
 }
 
+.product-price{
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
 .product-btn{
     background-color: orange ;
     color: white;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+    transition: background-color 0.3s, transform 0.3s;
 }
-.product-price{
-    color: white;
-    margin-left: 15px;
-    margin-bottom: 15px;
+.product-btn:hover {
+    background-color: #e69500;
+    border: 1px solid yellow;
+    transform: scale(1.05);
+}
+.product-btn:focus {
+    outline: none; /* Ensure focus does not show any border */
 }
