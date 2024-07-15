@@ -1,36 +1,93 @@
-  .main-slogan {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-image: linear-gradient(
-        rgba(26, 26, 26, 0.5),
-        rgba(38, 38, 38, 0.8)
-      ),
-      url("https://www.middletonshoppingcentre.co.uk/wp-content/uploads/2024/04/Mobile-Middleton-Slider-Image-4.jpg");
-      
-  }
+.main-slogan {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(26, 26, 26, 0.5),
+      rgba(38, 38, 38, 0.8)
+    ),
+    url("https://www.middletonshoppingcentre.co.uk/wp-content/uploads/2024/04/Mobile-Middleton-Slider-Image-4.jpg");
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.wrapper-slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 800px;
+  max-width: 1200px;
+  padding: 40px;
+  background-color: rgba(0, 51, 102, 0.9);
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.content h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero-button {
+  background-color: #e66b29;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e95a50;
+}
+
+.trusted-partners {
+  margin-top: 40px;
+  width: 100%;
+  color: white;
   
-  .wrapper-slogan {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    height: 80vh;
-  }
-  
-  .content {
-    background-color: #003366;
-    padding: 1em 2em;
-    color: #ffffff;
-  }
-  
-  .white-text {
-    color: #ffffff;
-  }
-  
-  .link-text {
-    color: #ffffff;
-  }
-  
-  .link-text:hover {
-    color: #f47422;
-  }
+}
+.partners-logo-1{
+  display: flex;
+  gap: 30px;
+}
+
+.trusted-partners p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.partners-logos {
+  display: flex;
+  gap: 20px;
+}
+
+.partners-logos img {
+  height: 40px;
+}
+
+.highlight {
+  color: orange;
+}
+
+.link-text {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+.link-text:hover {
+  color: #e95a50;
+}
