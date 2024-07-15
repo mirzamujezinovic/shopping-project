@@ -19,7 +19,7 @@ export default function Slogan() {
           </Link>
         </div>
         <div className="trusted-partners">
-          <p>Trusted Partners</p>
+          <p>Sponsors</p>
           <div className="partners-logos">
             <div className="partners-logo-1">
             <img src="https://truetexashoops.com/wp-content/uploads/2020/03/54-542261_adidas-white-logo-png-adidas-white-logo-vector.png" alt="SquareStone Logo" />
