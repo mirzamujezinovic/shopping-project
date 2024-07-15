@@ -34,7 +34,7 @@
 }
 
 .product-btn{
-    background-color: orange ;
+    background-color: #f47422 ;
     color: white;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
@@ -42,9 +42,9 @@
 }
 .product-btn:hover {
     background-color: #e69500;
-    border: 1px solid yellow;
+    border: 1px solid orange;
     transform: scale(1.05);
 }
 .product-btn:focus {
-    outline: none; /* Ensure focus does not show any border */
+    outline: none;  /*Ovo je za kada kliknes neko dugme da se ne pojavljuje border oko njega*/
 }
