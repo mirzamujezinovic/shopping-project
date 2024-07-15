@@ -23,12 +23,15 @@
     align-items: center;
     justify-content: center;
     color: orange;
+    transition: color 0.3s ease;
+
   }
   
   .pagination-strelica {
     border-radius: 30px;
     background-color: #003366;
     color: white;
+    transition: color 0.3s ease;
   }
   
   .pagination-strelica:hover {
@@ -44,4 +47,6 @@
     color: #003366; /* Change the color for active page */
     font-weight: bold; /* Make the active page bold */
   }
-  
+  .pagination-btn:focus {
+    outline: none;  /*Ovo je za kada kliknes neko dugme da se ne pojavljuje border oko njega*/
+}
