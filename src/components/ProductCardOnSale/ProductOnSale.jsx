@@ -33,7 +33,7 @@ export default function ProductCardOnSale({ slika, description, cena }) {
           
         </Text>
         
-        <Button fullWidth mt="md" radius="md" className="product-btn">
+        <Button fullWidth mt="md" radius="md" className="product-btn" >
           Add To Cart
         </Button>
       </Card>

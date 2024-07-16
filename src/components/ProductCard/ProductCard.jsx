@@ -20,9 +20,9 @@ export default function ProductCard({ slika, description, cena }) {
       <Text  className="product-price">
         {cena} RSD
       </Text>
-      <Button  fullWidth mt="md" radius="md" className="product-btn">
-        Add To Cart
-      </Button>
+      <Button className="product-btn" mt="md" radius="md" >
+          Add To Cart
+        </Button>
     </Card>
   );
 }

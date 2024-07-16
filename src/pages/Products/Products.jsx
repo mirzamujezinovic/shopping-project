@@ -24,6 +24,7 @@ export default function Products() {
             slika={product.image_url}
             description={product.short_description}
             cena={product.current_price}
+            onClick={()=>addToCart(product)}
           />
         );
       }).slice(
