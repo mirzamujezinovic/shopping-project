@@ -7,7 +7,7 @@ import "./Products.css";
 export default function Products() {
   const [page, setPage] = useState(1)
   const brojProducta = products.length
-  const brojProductaPoStranici = 12
+  const brojProductaPoStranici = 15
   const brojStranica = Math.ceil(brojProducta / brojProductaPoStranici)
   useEffect(() => {
     window.scrollTo({
