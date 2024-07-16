@@ -1,0 +1,78 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    width: 250px;
+    border-radius: 1em;
+    box-shadow: 0 0 20px 5px rgb(205, 200, 200);
+    background-color: #003366;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px 10px rgba(205, 200, 200, 0.9);
+}
+
+.img {
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.product-description {
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+.product-btn {
+    background-color: #f47422;
+    color: white;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-btn:hover {
+    background-color: #e69500;
+    border: 1px solid orange;
+    transform: scale(1.05);
+}
+
+.product-btn:focus {
+    outline: none;  /* This removes the outline when the button is clicked */
+}
+
+.popust {
+    position: absolute;
+    top: 10px; /* Adjust these values as needed to position the discount image correctly */
+    right: 1px;
+    width: 75px; /* Ensure the image respects the container boundaries */
+}
+
+.discount-img {
+    width: 100%;
+    max-width: 100%; /* Ensure the image scales properly within its container */
+}
+.stara-product-price{
+    color: rgb(160, 146, 146);
+    margin-left: 15px;
+    
+    font-size: 17px;
+}
+.nova-product-price{
+    color: white;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
