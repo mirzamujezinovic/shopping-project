@@ -27,7 +27,6 @@ export default function ProductCardOnSale({ slika, description, cena }) {
         <Text className="stara-product-price">
           <del>{cena} RSD</del> 
           
-          
         </Text>
         <Text className="nova-product-price">
           {cenaSaPopustom.toFixed(3)} RSD 
