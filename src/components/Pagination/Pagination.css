@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: orange;
+    color: #e69500;
     transition: color 0.3s ease;
 
   }
@@ -43,9 +43,9 @@
   }
   
   .pagination-btn.active {
-    font-size: 2.5em; /* Increase the font size for active page */
-    color: #003366; /* Change the color for active page */
-    font-weight: bold; /* Make the active page bold */
+    font-size: 2.5em; 
+    color: #003366; 
+    font-weight: bold; 
   }
   .pagination-btn:focus {
     outline: none;  /*Ovo je za kada kliknes neko dugme da se ne pojavljuje border oko njega*/
