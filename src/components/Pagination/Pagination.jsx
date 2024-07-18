@@ -1,7 +1,7 @@
 import "./Pagination.css";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-export function Pagination({ brojStranica, setPage, page }) {
+export default function Pagination({ brojStranica, setPage, page }) {
   const niz = [];
   for (let i = 1; i <= brojStranica; i++) {
     niz.push(i);
