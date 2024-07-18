@@ -4,48 +4,65 @@
     min-height: 300px;
     width: 250px;
     border-radius: 1em;
-    box-shadow: 0 0 20px 5px rgb(205, 200, 200);
-    background-color: #003366;
+    box-shadow: 0 0 20px 5px grey;
     transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-}
-.product:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px 10px rgba(205, 200, 200, 0.9);
-}
-
-
-.img {
+    border: 0.1px solid #003366;
+    position: relative; /* Dodato za pozicioniranje popusta */
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img {
     width: 100%;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-}
-
-.product-description{
-    margin-left: 15px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 10px;
-}
-
-.product-price{
+  }
+  
+  .info {
+    display: grid;
+    grid-template-rows: 50px 1fr 1fr;
+    margin: 1em;
+  }
+  
+  .naslov {
+    color: black;
+  }
+  
+  .price {
+    color: black;
+    display: flex;
+    gap: 1em;
+  }
+  
+  .description {
+    color: #838386;
+  }
+  
+  .cart-button {
+    background-color: #003366;
     color: white;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    font-size: 19px;
-}
-
-.product-btn{
-    background-color: #f47422 ;
-    color: white;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-.product-btn:hover {
-    background-color: #e69500;
-    border: 1px solid orange;
-    transform: scale(1.05);
-}
-.product-btn:focus {
-    outline: none;  /*Ovo je za kada kliknes neko dugme da se ne pojavljuje border oko njega*/
-}
+  }
+  .cart-button:focus {
+    outline: none; /*OVO JE KOMANDA DA SE MAKNE BORDER KAD SE KLIKNE DUGME*/
+    box-shadow: none;
+  }
+  
+  .mantine-Button-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+  
+  .product-popust {
+    color: red;
+    font-weight: 1000;
+    font-size: 22px;
+    position: absolute; 
+    top: 10px; /* Razmak od vrha */
+    right: 10px; /* Razmak od desne strane */
+  }
+  

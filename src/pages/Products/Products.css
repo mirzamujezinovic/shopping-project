@@ -3,5 +3,7 @@
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     gap: 2em;
-    margin: 3em 0;
-}
+    margin: 3em 2em;
+  }
+  
+  
