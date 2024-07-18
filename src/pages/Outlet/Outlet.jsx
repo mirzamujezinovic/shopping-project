@@ -1,43 +1,64 @@
-import ProductCardOnSale from "../../components/ProductCardOnSale/ProductOnSale";
-import productsOnSale from "../../common/productsOnSale.json";
-import { Pagination } from "../../components/Pagination/Pagination";
-import { useState, useEffect } from "react";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import products from "../../common/productsOnSale.json";
 import "./Outlet.css";
-
+import { useContext, useEffect, useState } from "react";
+import Pagination from "../../components/Pagination/Pagination";
+import { AppContext } from "../../context/AppContext";
 
 export default function Outlet() {
-    const [page, setPage] = useState(1)
-  const brojProducta = productsOnSale.length
-  const brojProductaPoStranici = 6
-  const brojStranica = Math.ceil(brojProducta / brojProductaPoStranici)
+  const { addToCart, productsInCart, removeFromCart } = useContext(AppContext);
+
+  const [page, setPage] = useState(1);
+  const proizvod = products.length;
+  const brojPoStranici = 15;
+  const brojStranica = Math.ceil(proizvod / brojPoStranici);
   useEffect(() => {
     window.scrollTo({
-      top: 0,
       behavior: "smooth",
+      top: 0,
     });
   }, [page]);
   return (
     <>
-  <div className="producti">
-    <div className="onsale-wrapper-product">
-      {productsOnSale.map((product) => {
-        return (
-          <ProductCardOnSale
-            slika={product.image_url}
-            description={product.short_description}
-            cena={product.current_price}
-            onClick={()=>addToCart(product)}
-          />
-        );
-      }).slice(
-        brojProductaPoStranici * (page - 1),
-        brojProductaPoStranici * page
-      )}
-    </div>
-    <Pagination brojStranica={brojStranica} setPage={setPage} page={page} />
-  </div>
-  ;
+      <div className="wrapper-product">
+        {products
+          .map((product) => {
+            const productInCart = productsInCart.find(
+              (item) => item.id === product.id
+            );
 
+            const strPrice = product.current_price;
+            const numPrice = +strPrice.replace(".", "").replace(",", ".");
+            const newPrice = (
+              numPrice -
+              (product.percentage / 100) * numPrice
+            ).toFixed(2);
+            return (
+              <ProductCard
+                key={product.id}
+                imageUrl={product.image_url}
+                description={product.short_description}
+                title={product.title}
+                percentage={product.percentage}
+                onClick={() => {
+                  if (productInCart) {
+                    removeFromCart(product);
+                  } else {
+                    addToCart(product);
+                  }
+                }}
+                product={product}
+                price={product.current_price}
+                discount={product.percentage ? true : false}
+                discountedPrice={newPrice}
+              />
+            );
+          })
+          .slice(brojPoStranici * (page - 1), brojPoStranici * page)}
+      </div>
+      <div className="pagination">
+        <Pagination brojStranica={brojStranica} setPage={setPage} page={page} />
+      </div>
     </>
-    );
-  }
+  );
+}
