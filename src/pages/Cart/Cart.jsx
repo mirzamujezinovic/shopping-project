@@ -1,15 +1,20 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { AppContext } from "../../context/AppContext";
 import "./Cart.css";
 
 export default function Cart() {
   const { productsInCart, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(AppContext);
-
+  // const totalAmount = productsInCart.reduce((acc, curr))
   return (
     <div className="cart-container">
       {productsInCart.length === 0 ? (
         <div className="cart-empty">
           <img src="https://www.adasglobal.com/img/empty-cart.png" alt="prazna" />
+          <br />
+          <div className="cart-idi">
+  See our <Link className="link-active link-text" to="/products"><span className="highlight">products</span></Link>.
+</div>
         </div>
       ) : (
         productsInCart.map((item) => (
@@ -26,15 +31,16 @@ export default function Cart() {
                 <p className="cart-item-price">{item.current_price} RSD</p>
               )}
               <div className="cart-item-quantity">
-                <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                <button onClick={() => decreaseQuantity(item.id)} className="cart-item-dugme">-</button>
                 <span>{item.quantity}</span>
-                <button onClick={() => increaseQuantity(item.id)}>+</button>
+                <button onClick={() => increaseQuantity(item.id)} className="cart-item-dugme">+</button>
               </div>
-              <button onClick={() => removeFromCart(item)} className="cart-item-remove">Remove</button>
+              <button onClick={() => removeFromCart(item)} className="cart-item-remove" >Remove</button>
             </div>
           </div>
         ))
       )}
+      <h1>Total price: </h1>
     </div>
   );
 }

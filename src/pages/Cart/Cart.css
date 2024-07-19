@@ -6,7 +6,7 @@
     padding: 2em;
     background-color: #ffffff;
     border-radius: 1em;
-    box-shadow: 0 0 20px 5px grey;
+    /* box-shadow: 0 0 20px 5px grey; */
     width: 80%;
     margin: 20px auto;
   }
@@ -31,8 +31,32 @@
     padding: 1em;
     background-color: rgb(255, 255, 255);
     border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 100%;
+  }
+  .cart-idi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-idi {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em; /* Primer za povećanje fonta */
+  }
+  
+  .cart-idi .highlight {
+    margin-left: 0.5em; /* Odvajanje proizvoda od ostatka rečenice */
+    color: #f47422; /* Primer za promenu boje teksta */
+    font-weight: bold; /* Primer za podebljavanje teksta */
+  }
+  
+  .link-active {
+    text-decoration: none; /* Ukloni podvlačenje */
+  }
+  
+  .link-active:hover {
+    text-decoration: underline; /* Dodaj podvlačenje na hover */
   }
   
   .cart-item-image {
@@ -76,9 +100,15 @@
     border-radius: 0.5em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 5px;
   }
   
   .cart-item-remove:hover {
     background-color: #0d4b89; 
+  }
+  .cart-item-dugme{
+    background-color: #003366;
+    color: white;
+    margin: 5px;
   }
   
