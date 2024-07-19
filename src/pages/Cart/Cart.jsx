@@ -3,7 +3,7 @@ import { AppContext } from "../../context/AppContext";
 import "./Cart.css";
 
 export default function Cart() {
-  const { productsInCart, removeFromCart } = useContext(AppContext);
+  const { productsInCart, removeFromCart, increaseQuantity, decreaseQuantity } = useContext(AppContext);
 
   return (
     <div className="cart-container">
@@ -17,15 +17,19 @@ export default function Cart() {
             <img src={item.image_url} alt={item.title} className="cart-item-image" />
             <div className="cart-item-info">
               <h3 className="cart-item-name">{item.title}</h3>
-              {item.discountedPrice && (
+              {item.discountedPrice ? (
                 <div className="cart-item-prices">
                   <p className="cart-item-discount">{item.original_price} RSD</p>
                   <p className="cart-item-price">{item.current_price} RSD</p>
                 </div>
-              )}
-              {!item.discountedPrice && (
+              ) : (
                 <p className="cart-item-price">{item.current_price} RSD</p>
               )}
+              <div className="cart-item-quantity">
+                <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => increaseQuantity(item.id)}>+</button>
+              </div>
               <button onClick={() => removeFromCart(item)} className="cart-item-remove">Remove</button>
             </div>
           </div>
