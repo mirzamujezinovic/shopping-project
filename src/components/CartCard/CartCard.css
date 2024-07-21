@@ -1,0 +1,70 @@
+.product-cart {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 3fr 3fr;
+    box-shadow: 0 0 20px 1px #003366;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .quantity {
+    display: flex;
+  }
+  .quantity-button{
+    margin: 10px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .quantity > p {
+    grid-row: span 2;
+    align-self: center;
+  }
+  
+  .quantity > button {
+    justify-self: end;
+    background-color: #f47422;
+    font-size: 1.3em;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+  }
+  
+  .product-price {
+    justify-self: end;
+  }
+  
+  .remove-button {
+    background-color: #003366;/*#003366*/
+    margin: 0 3em;
+    color: whitesmoke;
+  }
+  .discount-info {
+    color: red; /* Ili bilo koja boja koja prikazuje da je cena snižena */
+    text-decoration: line-through; /* Da se prikaže precrtana puna cena */
+  }
+  
+  .product-price > h2,
+  .product-info > h2 {
+    color: black;
+  }
+  
+  .product-info > p,
+  .product-price > p,
+  .quantity > p {
+    color: #838386;
+  }

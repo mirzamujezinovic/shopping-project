@@ -1,114 +1,45 @@
-/* Cart.css */
-.cart-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 1em;
-    /* box-shadow: 0 0 20px 5px grey; */
-    width: 80%;
-    margin: 20px auto;
-  }
-  
-  .empty-cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .empty-cart img {
-    width: 500px;
-    height: 500;
-  }
-  
-  .cart-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Da bi se stavila cena i dugme za uklanjanje sa desne strane */
-    margin-bottom: 1em;
-    padding: 1em;
-    background-color: rgb(255, 255, 255);
-    border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
-  }
-  .cart-idi{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .cart-idi {
-    display: flex;
-    align-items: center;
-    font-size: 1.2em; /* Primer za povećanje fonta */
-  }
-  
-  .cart-idi .highlight {
-    margin-left: 0.5em; /* Odvajanje proizvoda od ostatka rečenice */
-    color: #f47422; /* Primer za promenu boje teksta */
-    font-weight: bold; /* Primer za podebljavanje teksta */
-  }
-  
-  .link-active {
-    text-decoration: none; /* Ukloni podvlačenje */
-  }
-  
-  .link-active:hover {
-    text-decoration: underline; /* Dodaj podvlačenje na hover */
-  }
-  
-  .cart-item-image {
-    width: 100px;
-    height: 100px;
-    margin-right: 1em;
-    border-radius: 10px; 
-  }
-  
-  .cart-item-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1; 
-  }
-  
-  .cart-item-name {
-    margin: 0;
-    color: #f47422; 
-  }
-  
-  .cart-item-price {
-    margin: 0.5em 0 0 0;
-    color: #838386; 
-  }
-  
-  .cart-item-controls {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cart-item-quantity {
-    margin-right: 1em; 
-  }
-  
-  .cart-item-remove {
-    background-color: #003366; 
-    width: 300px;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 5px;
-  }
-  
-  .cart-item-remove:hover {
-    background-color: #0d4b89; 
-  }
-  .cart-item-dugme{
-    background-color: #003366;
-    color: white;
-    margin: 5px;
-  }
-  
+.wrapper-page {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.wrapper-cart {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.wrapper-cart > h1 {
+  font-size: 2em;
+  height: 50px;
+  color: #003366;
+  justify-self: start;
+}
+
+.error {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.error > h2 {
+  font-size: 1.5em;
+  color: #003366;
+}
+.error > p {
+  color: #838386;
+  font-size: 1.3em;
+}
+
+.error-img {
+  width: 45%;
+  height: 60vh;
+  object-fit: cover;
+}
