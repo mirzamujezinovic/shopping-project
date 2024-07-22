@@ -22,7 +22,7 @@ function ContextProvider({ children }) {
     setProductsInCart((prevProducts) =>
       prevProducts.map((item) => {
         if (item.id === product.id && item.quantity > 1) {
-          return { ...item, quantity: item.quantity - 1, stock: item.stock + 1 };
+          return { ...item, quantity: item.quantity - 1 };
         }
         return item;
       })
@@ -33,7 +33,7 @@ function ContextProvider({ children }) {
     setProductsInCart((prevProducts) =>
       prevProducts.map((item) => {
         if (item.id === product.id && item.quantity < product.stock) {
-          return { ...item, quantity: item.quantity + 1, stock: item.stock - 1 };
+          return { ...item, quantity: item.quantity + 1 };
         }
         return item;
       })
