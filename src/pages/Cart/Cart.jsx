@@ -1,13 +1,15 @@
-/* eslint-disable react/jsx-key */
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import CartCard from "../../components/CartCard/CartCard";
 import "./Cart.css";
 import { Link } from "react-router-dom";
+import ModalCart from "../../components/Modal-cart/ModalCart"; 
 
 export default function Cart() {
   const { productsInCart, removeFromCart, decrementProduct, incrementProduct } = useContext(AppContext);
   const [totalAmount, setTotalAmount] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [productToRemove, setProductToRemove] = useState(null); 
 
   useEffect(() => {
     const newTotal = productsInCart.reduce((acc, curr) => {
@@ -21,6 +23,24 @@ export default function Cart() {
     }, 0).toFixed(3);
     setTotalAmount(newTotal);
   }, [productsInCart]);
+
+  const handleRemoveClick = (product) => {
+    setProductToRemove(product);
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmRemove = () => {
+    if (productToRemove) {
+      removeFromCart(productToRemove);
+    }
+    setIsModalOpen(false);
+    setProductToRemove(null);
+  };
+
+  const handleCancelRemove = () => {
+    setIsModalOpen(false);
+    setProductToRemove(null);
+  };
 
   return (
     <div className="wrapper-page">
@@ -45,7 +65,7 @@ export default function Cart() {
                 price={product.current_price}  
                 discountedPrice={product.discountedPrice}  
                 description={product.short_description}
-                onClick={() => removeFromCart(product)}
+                onClick={() => handleRemoveClick(product)} // Trigger modal on remove click
                 quantity={product.quantity}
                 decrementProduct={() => decrementProduct(product)}
                 incrementProduct={() => incrementProduct(product)}
@@ -54,6 +74,12 @@ export default function Cart() {
           })}
           <h1>Total amount: {totalAmount}</h1>
         </div>
+      )}
+      {isModalOpen && (
+        <ModalCart
+          onConfirm={handleConfirmRemove}
+          onCancel={handleCancelRemove}
+        />
       )}
     </div>
   );
