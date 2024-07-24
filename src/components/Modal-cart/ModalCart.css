@@ -112,22 +112,33 @@
     justify-content: center;
   }
   
-  .btn-cancel, .btn-confirm {
+
+  .btn-cancel {
+    background-color: white;
+    color: #003366;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 0 20px 5px grey;
   }
-  
-  .btn-cancel {
-    background-color: white;
-    color: #003366;
+  .btn-cancel:focus{
+    outline: none; /*OVO JE KOMANDA DA SE MAKNE BORDER KAD SE KLIKNE DUGME*/
+    box-shadow: none;
+  }
+  .btn-confirm:focus{
+    outline: none; /*OVO JE KOMANDA DA SE MAKNE BORDER KAD SE KLIKNE DUGME*/
+    box-shadow: none;
   }
   
   .btn-confirm {
     margin-left: 20px;
     background-color: #f47422;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 5px grey;
   }
   
